@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" href="./imgs/Title_icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- Font: Lora -->
+    <title>Astronomy X - Home</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<body>
+    <!-- Promotional Messages -->
+    <!-- Top Menu -->
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container" style="height: var(--top_nav_bar_height);">
+            <!-- Smaller Site -->
+            <a class="navbar-brand d-md-none" href="./home.html">
+                <img src="./imgs/Title_icon.png" alt="icon" style="height:var(--icon_height)">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                aria-controls="#offcanvas" aria-label="Toggle navigation" style="border-color: var(--main_color) ;">
+                <span style="color: var(--main_color);">=</span>
+            </button>
+            <!-- Full-Screen Site -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
+                style="background-color: var(--main_bgcolor);">
+                <div class="offcanvas-header">
+                    <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"
+                        style="border: none; background-color: transparent;"><span
+                            style="color: var(--main_color);">X</span></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./home.html">
+                                <img src="./imgs/Title_icon.png" alt="icon" style="height:var(--icon_height)">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="w-100 me-3 d-flex align-items-center">
+                                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                            </form>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./satellites.html">Satellites</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#LogIn_form">Log
+                                In</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#SignUp_form">Sign Up</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#">Support</a></li> -->
+                        <!-- <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./shop.html">
+                                <i class="bi bi-cart"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Login Form -->
+    <div class="modal fade" id="LogIn_form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-body p-5 pt-0" style="pointer-events: auto;">
+                <form class="form">
+                    <div class="form-title"><span>JOINING YOUR</span></div>
+                    <div class="title-2"><span>SPACE</span></div>
+                    <div class="input-container">
+                        <input class="input-mail" type="email" placeholder="Enter email" required>
+                        <span> </span>
+                    </div>
+
+                    <section class="bg-stars">
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                    </section>
+
+                    <div class="input-container">
+                        <input class="input-pwd" type="password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="submit">
+                        <span class="sign-text">Sign in</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sigun Up Form -->
+    <div class="modal fade" id="SignUp_form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-body p-5 pt-0" style="pointer-events: auto;">
+                <form class="form">
+                    <div class="form-title"><span>CREATING YOUR</span></div>
+                    <div class="title-2"><span>SPACE</span></div>
+                    <div class="input-container">
+                        <input class="input-mail" type="email" placeholder="Enter email" required>
+                        <span> </span>
+                    </div>
+
+                    <section class="bg-stars">
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                    </section>
+
+                    <div class="input-container">
+                        <input class="input-pwd" type="password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="submit">
+                        <span class="sign-text">Sign up</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <main>
+        <!-- Caroseul -->
+        <section class="caro_section">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="https://bigthink.com/wp-content/uploads/2023/02/AdobeStock_558949687.jpg"
+                            class="d-block w-100 caro_images" alt="image_1">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="https://www.rheagroup.com/wp-content/uploads/2022/04/international-day-of-human-space-flight.jpg"
+                            class="d-block w-100 caro_images" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="https://assets.iflscience.com/assets/articleNo/59739/aImg/35943/1621265502-astronaut-floating-freely-in-space-fer-gregory-shutterstock-com-o.webp"
+                            class="d-block w-100 caro_images" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="container">
+            <div class="row g-5">
+                <div class="col-md-8" style="margin-bottom: 1rem;">
+                    <!-- Country Chart -->
+                    <canvas id="Country_Satellites" style="width:100%;max-width:600px"></canvas>
+
+                    <script>
+                        var xValues = ["United States", "China", "Russia", "Rest of the world"];
+                        var yValues = [3433, 541, 172, 1319];
+                        var barColors = ["red", "green", "blue", "orange", "brown"];
+
+                        new Chart("Country_Satellites", {
+                            type: "horizontalBar",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    backgroundColor: barColors,
+                                    data: yValues
+                                }]
+                            },
+                            options: {
+                                legend: {
+                                    display: false
+                                },
+                                title: {
+                                    display: true,
+                                    text: "Number of satellites in orbit by major country as of April 30, 2022",
+                                    fontColor: "white",
+                                },
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            fontColor: "white"
+                                        }
+                                        // ,gridLines:{
+                                        //     display: false,
+                                        // }
+                                    }],
+                                    xAxes: [{
+                                        ticks: {
+                                            fontColor: "white"
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                    </script>
+                    <p>Of the 5,465 active artificial satellites orbiting the Earth as of April 30, 2022, 3,433 belong
+                        to the
+                        United States. This is by far the largest number of any single country, with their nearest
+                        competitor,
+                        China, accounting for only 541.</p>
+                    <hr>
+
+                    <!-- Starlink_Chart -->
+                    <canvas id="Starlink_Satellites" style="width:100%;max-width:600px"></canvas>
+
+                    <script>
+                        var xValues = ["Sep '19", "Mar '20", "Sep '20", "Mar '21", "Sep '21", "Mar '22"];
+                        var yValues = [67, 365, 677, 1322, 1683, 1919];
+                        var barColors = [
+                            "rgba(174,158,231,0.2)",
+                            "rgba(174,158,231,0.4)",
+                            "rgba(174,158,231,0.5)",
+                            "rgba(174,158,231,0.6)",
+                            "rgba(174,158,231,0.8)",
+                            "rgba(174,158,231,1.0)"
+                        ];
+
+                        new Chart("Starlink_Satellites", {
+                            type: "bar",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    backgroundColor: barColors,
+                                    data: yValues
+                                }]
+                            },
+                            options: {
+                                legend: { display: false },
+                                title: {
+                                    display: true,
+                                    text: "Number of Starlink satellites in space",
+                                    fontColor: "white",
+                                },
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true,
+                                            fontColor: "white"
+                                        }
+                                    }],
+                                    xAxes: [{
+                                        ticks: {
+                                            fontColor: "white"
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                    </script>
+                    <p>SpaceX started launching Starlink satellites in 2019. As of November 2023, it consists of over
+                        5,500 mass-produced small satellites in low Earth orbit (LEO) that communicate with
+                        designated ground transceivers. Nearly 12,000 satellites are planned to be deployed, with a
+                        possible later extension to 42,000. SpaceX announced reaching more than 1 million subscribers in
+                        December 2022, 1.5 million subscribers in May 2023, and 2 million subscribers in September
+                        2023. It has had a key role in the Russo-Ukrainian War.</p>
+                    <hr>
+
+                    <!-- Categories -->
+                    <canvas id="Categories_Satellites" style="width:100%;max-width:600px"></canvas> <br>
+                    <p>In the vast expanse of space, satellites play a crucial role in our modern world. These
+                        artificial objects orbiting the Earth have revolutionized communication, navigation, weather
+                        forecasting, and scientific research. While there are numerous types of satellites, we will
+                        focus on the eight main categories that dominate the skies above us.
+
+                    </p>
+                    <hr>
+
+                    <script>
+                        var xValues = ["Communication", "Remote Sensing", "Scientific", "Weather Forecasting", "Military Communication", "Military Early Warning", "Military Navigation", "Military Reconnaissance & Surveiliance"];
+                        var yValues = [64, 8, 6, 4, 8, 2, 6, 2];
+                        var barColors = [
+                            "#4472A7",
+                            "#AB4642",
+                            "#89A54E",
+                            "#70588F",
+                            "#4099AF",
+                            "#DB853C",
+                            "#93A9CF",
+                            "#D19393"
+                        ];
+
+                        new Chart("Categories_Satellites", {
+                            type: "pie",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    backgroundColor: barColors,
+                                    data: yValues
+                                }]
+                            },
+                            options: {
+                                legend: {
+                                    display: true,
+                                    labels: {
+                                        fontColor: "white"
+                                    }
+                                },
+                                title: {
+                                    display: true,
+                                    text: "Satellite Type(%)",
+                                    fontColor: "white",
+                                },
+                            }
+                        });
+                    </script>
+
+                    <!-- Active_Satellites -->
+                    <canvas id="Active_Satellites" style="width:100%;max-width:600px"></canvas> <br>
+
+                    <script>
+                        var xValues = ["Starlink", "Planet Labs", "OneWeb", "Kosmos", "Other"];
+                        var yValues = [1006, 110, 176, 98, 2131];
+                        var barColors = [
+                            "#e81772",
+                            "#4b66eb",
+                            "#4ceb9b",
+                            "#ffad01",
+                            "#c6c7c2"
+                        ];
+
+                        new Chart("Active_Satellites", {
+                            type: "doughnut",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    backgroundColor: barColors,
+                                    data: yValues
+                                }]
+                            },
+                            options: {
+                                legend: {
+                                    display: true,
+                                    labels: {
+                                        fontColor: "white"
+                                    }
+                                },
+                                title: {
+                                    display: true,
+                                    text: "Number of active satellities in orbit Jan 31 2021",
+                                    fontColor: "white",
+                                },
+
+                            }
+                        });
+                    </script>
+                    <p class="title">Of the 1,029 smallsats launched in 2020, 773 (75%) are part of Starlink, SpaceX’s global
+                        high-speed broadband service. It’s a new approach to satellite internet that relies on a network
+                        of interconnected satellites orbiting at low altitudes, meaning data has less distance to
+                        travel.</p>
+                    <hr>
+
+                    <!-- Total Satellites Launched -->
+                    <canvas id="Total" style="width:100%;max-width:600px"></canvas> 
+
+                    <script>
+                        var xValues = ["1970-80", "1981-90", "1991-2000", "2001-10", "2011-13"];
+
+                        new Chart("Total", {
+                            type: "line",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    label: "China",
+                                    data: [500, 600, 400, 500, 500],
+                                    borderColor: "red",
+                                    fill: false
+                                }, {
+                                    label: "USA",
+                                    data: [500, 400, 500, 200, 200],
+                                    borderColor: "blue",
+                                    fill: false
+                                }, {
+                                    label: "Japan",
+                                    data: [300, 300, 400, 600, 500],
+                                    borderColor: "purple",
+                                    fill: false
+                                }, {
+                                    label: "India",
+                                    data: [100, 300, 200, 400, 300],
+                                    borderColor: "green",
+                                    fill: false
+                                }]
+                            },
+                            options: {
+                                legend: {
+                                    display: true,
+                                    labels: {
+                                        fontColor: "white"
+                                    }
+                                },
+                                title: {
+                                    display: true,
+                                    text: "Total no.of satellities launched",
+                                    fontColor: "white"
+                                },
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true,
+                                            fontColor: "white"
+                                        }
+                                    }],
+                                    xAxes: [{
+                                        ticks: {
+                                            fontColor: "white"
+                                        }
+                                    }]
+                                }
+
+                            }
+                        }
+                            ,);
+                    </script>
+                    <p>As you can see from the table, if you choose to add all the numbers up, over the last 66 years,
+                        15,946 objects have been launched into space</p>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="position-sticky" style="top: 2rem;">
+                        <div class="mb-3 bg-body-tertiary rounded">
+                            <img src="https://www.cnet.com/a/img/resize/1a01b6b074937ad937e9eb4430bd21fa5bf31957/hub/2019/01/11/21c3dece-7bbb-4fba-8fca-10c894b8b39a/starship.jpg?auto=webp&width=1200"
+                                alt="">
+                        </div>
+
+                        <div>
+                            <h4 class="fst-italic">Recent posts</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                        href="https://www.space.com/moon-jupiter-dec-22-2023">
+                                        <img src="https://cdn.mos.cms.futurecdn.net/QYVV6XJRJNGU5CnALqtXVC-650-80.jpg.webp"
+                                            alt="">
+                                        <div class="col-lg-8">
+                                            <h6 class="mb-0">See the moon and Jupiter enjoy their final meet-up of 2023
+                                                in the night sky tonight
+                                            </h6>
+                                            <small class="feature_date">Dec 23, 2023</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                        href="https://www.space.com/ursid-meteor-shower-dec-2023">
+                                        <img src="https://cdn.mos.cms.futurecdn.net/yUJKiKsfagtYT3VfgybJ8d-650-80.jpg.webp"
+                                            alt="">
+                                        <div class="col-lg-8">
+                                            <h6 class="mb-0">The Ursids peak tonight, offering the last meteor shower of
+                                                2023 tonight
+                                            </h6>
+                                            <small class="feature_date">Dec 23, 2023</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                        href="https://www.space.com/running-chicken-nebula-vlt-photo">
+                                        <img src="https://cdn.mos.cms.futurecdn.net/M8SHXsWYcykbq5TzGcP72h-650-80.jpg.webp"
+                                            alt="">
+                                        <div class="col-lg-8">
+                                            <h6 class="mb-0">Distant nebula looks like fleeing turkey in festive new
+                                                Very Large Telescope photo
+                                            </h6>
+                                            <small class="feature_date">Dec 22, 2023</small>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4">
+                            <h4 class="fst-italic">Elsewhere</h4>
+                            <ol class="list-unstyled">
+                                <li><a href="https://github.com/DrazPham">GitHub</a></li>
+                                <li><a href="https://www.facebook.com/Draz.Milanista">Facebook</a></li>
+                                <li><a href="https://www.instagram.com/draz.principe/">Instagram</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Floating Icon -->
+            <div class="floating-icon" onclick="toggleMessage()" style="width: 2.5rem; height: 2.5rem;">
+                <i class="fas fa-info-circle"></i>
+            </div>
+
+            <div class="message-box" id="messageBox"
+                style="display: flex; flex-direction: column; border-radius: 5%; margin-bottom: -1.8rem;">
+                <div style=" display:flex; justify-content: space-between;">
+                    <img src="./imgs/Title_icon.png" alt="" style="height: 1.5rem;width:1.5rem; border-radius: 50%;">
+                    <button type="button" class="btn-close" aria-label="Close" onclick="toggleMessage()"></button>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5rem; width: 12rem;">
+                    <div style="display: flex; flex-direction: column;">
+                        <h4 style="color: black;margin-top: 1rem;">Chat with us</h4>
+                        <p style="font-size: 80%; color:black ;margin-top: 0.5rem;">Hi! How can we help you?</p>
+                    </div>
+                    <button
+                        style="border-radius: 10px; background-color: rgb(33,150,243); color: white; border:none">Start
+                        conversation</button>
+                </div>
+            </div>
+
+            <script>
+                function toggleMessage() {
+                    var messageBox = document.getElementById('messageBox');
+                    messageBox.style.display = (messageBox.style.display === 'block') ? 'none' : 'block';
+                }
+                function hideDot() {
+                    var dotIcon = document.getElementById('rounded ');
+                    dotIcon.style.display = 'none';
+                }
+            </script>
+        </main>
+
+        <!-- Footer -->
+        <div style="background-color: var(--main_bgcolor);">
+            <div class="container">
+                <footer class="py-5">
+                    <div class="row">
+                        <div class="col" style=" align-items: center;"><img src="./imgs/Icon.png" alt=""
+                                style="height: 10rem;width: auto;">
+                            <h3 style="margin-top: -2rem; margin-left: 2.2rem;">Astronomy X</h3>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Section</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class=" p-0 text-items">Home</a></li>
+                                <li class="nav-item mb-2"><a href="./satellites.html"
+                                        class=" p-0  text-items">Satellites</a></li>
+                                <li class="nav-item mb-2"><a data-bs-toggle="modal" data-bs-target="#LogIn_form"
+                                        class=" p-0 text-items ">Log In</a></li>
+                                <li class="nav-item mb-2"><a data-bs-toggle="modal" data-bs-target="#SignUp_form"
+                                        class=" p-0 text-items ">Sign Up</a></li>
+                                <li class="nav-item mb-2"><a href="./shop.html" class=" p-0 text-items ">Shop</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-5 offset-md-1 mb-3">
+                            <form id="myForm">
+                                <h5>Subscribe to receive the earliest updates</h5>
+                                <p>Stay informed with our latest news, offers, and updates.</p>
+                                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                    <label for="email" class="visually-hidden">Email address</label>
+                                    <input id="email" type="email" name="email" class="form-control"
+                                        placeholder="Email address" required>
+                                    <input class="btn btn-primary" type="submit" value="Subscribe">
+                                </div>
+                            </form>
+
+                            <script>
+                                document.getElementById('myForm').addEventListener('submit', function (event) {
+                                    event.preventDefault();
+                                    document.getElementById('email').value = '';
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                        <div style="display: flex; flex-direction: column;">
+                            <p>© 2023 Draz, Inc. All rights reserved.</p>
+                            <p>Copyright of <a href="https://getbootstrap.com/">Boostrap</a>, <a
+                                    href="https://uiverse.io/">Uiverse.io</a></p>
+                            <p>Supporters: Mr Nguyen Quang Nam, <a href="https://openai.com/">Chat GPT</a>, <a
+                                    href="https://stackoverflow.com/">Stack Overflow</a></p>
+                            <p>Influenced by: <a href="https://www.nasa.gov/">NASA</a>, <a
+                                    href="https://www.spacex.com/">SpaceX</a>, <a
+                                    href="https://www.space.com/">Space</a>
+                            </p>
+                        </div>
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3"><a href="https://www.facebook.com/Draz.Milanista"><i
+                                        class="bi bi-facebook"></i></a></li>
+                            <li class="ms-3"><a href="https://www.instagram.com/draz.principe/"><i
+                                        class="bi bi-instagram"></i></a></li>
+                            <li class="ms-3"><a href="https://discord.gg/nFGY7yVr"><i class="bi bi-discord"></i></a>
+                            </li>
+                            <li class="ms-3"><a href="https://github.com/DrazPham"><i class="bi bi-github"></i></a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+</body>
+
+</html>

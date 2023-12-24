@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" href="./imgs/Title_icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- Font: Lora -->
+    <title>Astronomy X - Home</title>
+</head>
+
+<body>
+    <!-- Promotional Messages -->
+    <!-- Top Menu -->
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container" style="height: var(--top_nav_bar_height);">
+            <!-- Smaller Site -->
+            <a class="navbar-brand d-md-none" href="./home.html">
+                <img src="./imgs/Title_icon.png" alt="icon" style="height:var(--icon_height)">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                aria-controls="#offcanvas" aria-label="Toggle navigation" style="border-color: var(--main_color) ;">
+                <span style="color: var(--main_color);">=</span>
+            </button>
+            <!-- Full-Screen Site -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
+                style="background-color: var(--main_bgcolor);">
+                <div class="offcanvas-header">
+                    <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"
+                        style="border: none; background-color: transparent;"><span
+                            style="color: var(--main_color);">X</span></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./home.html">
+                                <img src="./imgs/Title_icon.png" alt="icon" style="height:var(--icon_height)">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="w-100 me-3 d-flex align-items-center">
+                                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                            </form>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./satellites.html">Satellites</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#LogIn_form">Log In</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#SignUp_form">Sign Up</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#">Support</a></li> -->
+                        <!-- <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./shop.html">
+                                <i class="bi bi-cart"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Login Form -->
+    <div class="modal fade" id="LogIn_form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-body p-5 pt-0" style="pointer-events: auto;">
+                    <form class="form">
+                        <div class="form-title"><span>JOINING YOUR</span></div>
+                        <div class="title-2"><span>SPACE</span></div>
+                        <div class="input-container">
+                            <input class="input-mail" type="email" placeholder="Enter email" required>
+                            <span> </span>
+                        </div>
+
+                        <section class="bg-stars">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                        </section>
+
+                        <div class="input-container">
+                            <input class="input-pwd" type="password" placeholder="Enter password" required>
+                        </div>
+                        <button type="submit" class="submit">
+                            <span class="sign-text">Sign in</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    <!-- Sigun Up Form -->
+    <div class="modal fade" id="SignUp_form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-body p-5 pt-0" style="pointer-events: auto;">
+                    <form class="form">
+                        <div class="form-title"><span>CREATING YOUR</span></div>
+                        <div class="title-2"><span>SPACE</span></div>
+                        <div class="input-container">
+                            <input class="input-mail" type="email" placeholder="Enter email" required>
+                            <span> </span>
+                        </div>
+
+                        <section class="bg-stars">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                        </section>
+
+                        <div class="input-container">
+                            <input class="input-pwd" type="password" placeholder="Enter password" required>
+                        </div>
+                        <button type="submit" class="submit">
+                            <span class="sign-text">Sign up</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <main>
+        <!-- Caroseul -->
+        <section class="caro_section">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="https://bigthink.com/wp-content/uploads/2023/02/AdobeStock_558949687.jpg"
+                            class="d-block w-100 caro_images" alt="image_1">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="https://www.rheagroup.com/wp-content/uploads/2022/04/international-day-of-human-space-flight.jpg"
+                            class="d-block w-100 caro_images" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="https://assets.iflscience.com/assets/articleNo/59739/aImg/35943/1621265502-astronaut-floating-freely-in-space-fer-gregory-shutterstock-com-o.webp"
+                            class="d-block w-100 caro_images" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+
+        <main class="container">
+            <div class="row mb-2">
+                <div class="col-md-6 ">
+                    <div
+                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative feature_box">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 feature_header">Space Exploration</strong>
+                            <h3 class="mb-0 feature_title">International Space Station: Live updates</h3>
+                            <div class="mb-1 feature_date">Dec 23</div>
+                            <p class="card-text mb-auto feature_info">The International Space Station has been orbiting
+                                Earth since
+                                1998, serving as a research platform for NASA astronauts and its international partners:
+                                the Russian Space Agency Roscosmos, the European Space Agency (ESA) and the Japan
+                                Aerospace Exploration Agency (JAXA). .</p> <br>
+                            <a href="https://www.space.com/news/live/international-space-station-live-updates"
+                                class="icon-link gap-1 icon-link-hover stretched-link">
+                                Continue reading
+                            </a>
+                        </div>
+                        <div class="  d-lg-block">
+                            <img src="https://cdn.mos.cms.futurecdn.net/Sg7F9Gc8jyhQAUPi2aeHQE-1024-80.jpg" alt=""
+                                style="width: 100%;height: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div
+                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative feature_box">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 feature_header">Techonology</strong>
+                            <h3 class="mb-0 feature_title">Massive 'lighthouses' on the moon could light the way for
+                                future lunar
+                                astronauts
+                            </h3>
+                            <div class="mb-1 feature_date">Dec 13</div>
+                            <p class="mb-auto feature_info">Honeybee Robotics has a plan to build massive lighthouses on
+                                the moon to
+                                provide light, power and communications infrastructure as part of a plan to develop a
+                                lunar economy.
+                            </p>
+                            <a href="https://www.space.com/moon-lighthouse-technology-honeybee-robotics"
+                                class="icon-link gap-1 icon-link-hover stretched-link">
+                                Continue reading
+                            </a>
+                        </div>
+                        <div class="col-auto d-lg-block">
+                            <img src="https://cdn.mos.cms.futurecdn.net/LJkEQc5TBC4uDZWPJJeJqh-650-80.png.webp" alt=""
+                                style="width: 100%;height: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-8">
+                    <article class="blog-post">
+                        <h2 class="display-5 mb-1" style="font-size: var(--xxlarge_font_size);font-weight: bold;">How
+                            long could you survive in space without a
+                            spacesuit?
+                        </h2>
+                        <p class="blog-post-meta">August 03, 2023 by
+                            <a href="https://www.space.com/author/andrew-jones">Andrew Jones</a>
+                        </p>
+
+                        <p>The vacuum of space is unforgiving, and time is not on your side.</p>
+                        <hr>
+                        <img src="https://cdn.mos.cms.futurecdn.net/De8fcLpzvwfBGfqzabqGZ3-650-80.jpg.webp" alt=""  class="content_images">
+                        <figcaption>Astronaut Robert Stewart during Manned Maneuvering Unit (MMU) Exercise untethered
+                            above the
+                            Earth.February 11, 1984. (Image credit: HUM Images/Universal Images Group via Getty Images)
+                        </figcaption> <br>
+                            <p>Many of us have dreamed of going into space. Perhaps you've imagined what it would be
+                                like to
+                                visit the International Space Station or even explore new worlds. But traveling in space
+                                brings a whole set of challenges and hostile environments, so it's vital to recreate the
+                                conditions on Earth that have allowed life to evolve and flourish. <br> <br>
+
+                                Spacesuits allow astronauts to venture outside their spacecraft for short periods, by
+                                providing the air, water, pressure and physical protection needed for a human to
+                                survive. <br> <br>
+                                But what would happen without one of these advanced suits? <br> <br>
+
+                                Sci-fi movies and shows, including "2001: A Space Odyssey" and "The Expanse," have
+                                portrayed 
+                                astronauts suffering — and surviving — short exposures to outer space without a
+                                spacesuit,
+                                while others have depicted a range of grisly deaths. </p> 
+                            <p>But here in the real world, how long could a person survive if thrust into the harsh
+                                vacuum
+                                of outer space? The short answer is, not very long. </p> 
+                            <p>"Within a very short time, a matter of 10 to 15 seconds, you will become unconscious
+                                because of a lack of oxygen," according to Stefaan de Mey, a senior strategy officer at
+                                the European Space Agency (ESA) charged with coordinating the strategy area for human
+                                and robotic exploration. <br> <br>
+
+                                That may seem like a very short time, but it's because you would not want to hold your
+                                breath before being thrust into outer space. In the dark void of space, the oxygen that
+                                sustains us would become a serious problem. <br> <br>
+
+                                "The oxygen starts expanding and rupturing your lungs, tearing them apart — and that
+                                would cause boiling and bubbling of your blood, which immediately will cause embolism
+                                and have a fatal impact on your body," de Mey said. <br> <br>
+
+                                Divers face a similar danger when the water pressure decreases as they ascend from the
+                                depths. Before entering space unprotected, you'd need to empty your lungs as much as
+                                possible. The complete lack of pressure also causes other, though less immediately,
+                                deadly issues. </p> <br>
+                            <img src="https://cdn.mos.cms.futurecdn.net/KNEH3cnsKAT6FkKt6ABjyK-1024-80.jpg" alt="" class="content_images">
+                            <figcaption>Astronaut Ed White floats in the microgravity of space outside the Gemini IV
+                                spacecraft. (Image credit: NASA/Jim McDivitt)</figcaption> <br> 
+                            <p>Bodily fluids, such as saliva and tears, would begin to boil. A human body would also
+                                expand, but the skin would be elastic enough to cope with the pressure change, de Mey
+                                said, adding that horrific movie portrayals of exploding humans are not accurate. <br> <br>
+
+                                In the best-case scenario, you'd have a few seconds before the oxygen in your
+                                bloodstream would be used up, causing you to pass out. Because you'd be unable to alter
+                                your dire situation, brain death would follow within minutes, unless you were rescued
+                                and brought back to the safety of the pressurized, oxygen-rich environment of a
+                                spacecraft and resuscitated. <br> <br>
+
+                                In addition to providing vital oxygen and pressurization, spacesuits also shield
+                                astronauts from other dangers and harm. </p> 
+                            <img src="https://cdn.mos.cms.futurecdn.net/WNxsUHAAhejaMyMs8J8K3-1024-80.jpg.webp" alt="" class="content_images">
+                            <figcaption>NASA astronaut Stephen Bowen (right) and UAE astronaut Sultan AlNeyadi work on
+                                an antenna assembly as the Earth and moon hang overhead outside the International Space
+                                Station. (Image credit: NASA TV)</figcaption> <br>
+                            <p>"There is a temperature problem and radiation and micrometeoroid threats," de Mey said.
+                                "So spacesuits are designed to provide physical protection of the astronauts in outer
+                                space." <br><br>
+
+                                Whether an astronaut is in sunlight or shaded from the sun, they would experience
+                                extreme temperatures, ranging from minus 240 to 250 degrees Fahrenheit (minus 150 to 120
+                                degrees Celsius) in low Earth orbit (LEO). These conditions would cause burns or
+                                freezing, though not immediately in the latter case, as body heat is not easily
+                                conducted away in a vacuum. <br><br>
+
+                                Spacesuits also protect from various types of radiation. In LEO, there is protection
+                                from some forms of radiation. Prolonged or long-term exposure to electromagnetic
+                                radiation from the sun would cause health issues, including radiation sickness and an
+                                increased risk of cancer. UV light would also burn the skin. The added misfortune of
+                                particles from a solar flare reaching the astronaut at the time they were exposed in
+                                space would exacerbate many of these issues.</p>
+                            <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+                            <p>Micrometeoroids and space debris pose another danger. These travel at a rate of a few or
+                                tens of kilometers per second and are a threat to satellites, spacecraft and astronauts
+                                conducting extravehicular activities (EVAs), or spacewalks. Though extremely unlikely to
+                                affect an unprotected astronaut's chances of survival given the astronomically tiny
+                                chances of being hit during a short time in space, spacesuits are designed with multiple
+                                layers to help protect astronauts from any possible micrometeoroids or space debris
+                                whizzing around in orbit. <br><br>
+
+                                Being in space without an EVA suit becomes very deadly — very, very quickly. While
+                                someone could survive this grim scenario, they would want to have very little air in
+                                their lungs and get back to the safety of a pressurized spacecraft within seconds — or
+                                hope to be rescued and resuscitated within minutes. </p> <br>
+                    </article>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="position-sticky" style="top: 2rem;">
+                        <div class="mb-3 bg-body-tertiary rounded">
+                            <img src="https://www.cnet.com/a/img/resize/1a01b6b074937ad937e9eb4430bd21fa5bf31957/hub/2019/01/11/21c3dece-7bbb-4fba-8fca-10c894b8b39a/starship.jpg?auto=webp&width=1200" alt="">
+                        </div>
+
+                        <div>
+                            <h4 class="fst-italic">Recent posts</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                        href="https://www.space.com/moon-jupiter-dec-22-2023">
+                                        <img src="https://cdn.mos.cms.futurecdn.net/QYVV6XJRJNGU5CnALqtXVC-650-80.jpg.webp"
+                                            alt="">
+                                        <div class="col-lg-8">
+                                            <h6 class="mb-0">See the moon and Jupiter enjoy their final meet-up of 2023
+                                                in the night sky tonight
+                                            </h6>
+                                            <small class="feature_date">Dec 23, 2023</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                        href="https://www.space.com/ursid-meteor-shower-dec-2023">
+                                        <img src="https://cdn.mos.cms.futurecdn.net/yUJKiKsfagtYT3VfgybJ8d-650-80.jpg.webp"
+                                            alt="">
+                                        <div class="col-lg-8">
+                                            <h6 class="mb-0">The Ursids peak tonight, offering the last meteor shower of
+                                                2023 tonight
+                                            </h6>
+                                            <small class="feature_date">Dec 23, 2023</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                                        href="https://www.space.com/running-chicken-nebula-vlt-photo">
+                                        <img src="https://cdn.mos.cms.futurecdn.net/M8SHXsWYcykbq5TzGcP72h-650-80.jpg.webp" 
+                                            alt="">
+                                        <div class="col-lg-8">
+                                            <h6 class="mb-0">Distant nebula looks like fleeing turkey in festive new
+                                                Very Large Telescope photo
+                                            </h6>
+                                            <small class="feature_date">Dec 22, 2023</small>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4">
+                            <h4 class="fst-italic">Elsewhere</h4>
+                            <ol class="list-unstyled">
+                                <li><a href="https://github.com/DrazPham">GitHub</a></li>
+                                <li><a href="https://www.facebook.com/Draz.Milanista">Facebook</a></li>
+                                <li><a href="https://www.instagram.com/draz.principe/">Instagram</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Floating Icon -->
+            <div class="floating-icon" onclick="toggleMessage()" style="width: 2.5rem; height: 2.5rem;">
+                <i class="fas fa-info-circle"></i>
+            </div>
+
+            <div class="message-box" id="messageBox"
+                style="display: flex; flex-direction: column; border-radius: 5%; margin-bottom: -1.8rem;">
+                <div style=" display:flex; justify-content: space-between;">
+                    <img src="./imgs/Title_icon.png" alt="" style="height: 1.5rem;width:1.5rem; border-radius: 50%;">
+                    <button type="button" class="btn-close" aria-label="Close" onclick="toggleMessage()"></button>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5rem; width: 12rem;">
+                    <div style="display: flex; flex-direction: column;">
+                        <h4 style="color: black;margin-top: 1rem;">Chat with us</h4>
+                        <p style="font-size: 80%; color:black ;margin-top: 0.5rem;">Hi! How can we help you?</p>
+                    </div>
+                    <button
+                        style="border-radius: 10px; background-color: rgb(33,150,243); color: white; border:none">Start
+                        conversation</button>
+                </div>
+            </div>
+
+            <script>
+                function toggleMessage() {
+                    var messageBox = document.getElementById('messageBox');
+                    messageBox.style.display = (messageBox.style.display === 'block') ? 'none' : 'block';
+                }
+                function hideDot() {
+                    var dotIcon = document.getElementById('rounded ');
+                    dotIcon.style.display = 'none';
+                }
+            </script>
+    </main>
+
+    <!-- Footer -->
+    <div style="background-color: var(--main_bgcolor);">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col" style=" align-items: center;"><img src="./imgs/Icon.png" alt=""
+                            style="height: 10rem;width: auto;">
+                        <h3 style="margin-top: -2rem; margin-left: 2.2rem;">Astronomy X</h3>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class=" p-0 text-items">Home</a></li>
+                            <li class="nav-item mb-2"><a href="./satellites.html" class=" p-0  text-items">Satellites</a></li>
+                            <li class="nav-item mb-2"><a data-bs-toggle="modal" data-bs-target="#LogIn_form" class=" p-0 text-items ">Log In</a></li>
+                            <li class="nav-item mb-2"><a data-bs-toggle="modal" data-bs-target="#SignUp_form"class=" p-0 text-items ">Sign Up</a></li>
+                            <li class="nav-item mb-2"><a href="./shop.html" class=" p-0 text-items ">Shop</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form id="myForm">
+                            <h5>Subscribe to receive the earliest updates</h5>
+                            <p>Stay informed with our latest news, offers, and updates.</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <label for="email" class="visually-hidden">Email address</label>
+                                <input id="email" type="email" name="email" class="form-control"
+                                    placeholder="Email address" required>
+                                <input class="btn btn-primary" type="submit" value="Subscribe">
+                            </div>
+                        </form>
+
+                        <script>
+                            document.getElementById('myForm').addEventListener('submit', function (event) {
+                                event.preventDefault();
+                                document.getElementById('email').value = '';
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <div style="display: flex; flex-direction: column;">
+                        <p>© 2023 Draz, Inc. All rights reserved.</p>
+                        <p>Copyright of <a href="https://getbootstrap.com/">Boostrap</a>, <a
+                                href="https://uiverse.io/">Uiverse.io</a></p>
+                        <p>Supporters: Mr Nguyen Quang Nam, <a href="https://openai.com/">Chat GPT</a>, <a
+                                href="https://stackoverflow.com/">Stack Overflow</a></p>
+                        <p>Influenced by: <a href="https://www.nasa.gov/">NASA</a>, <a
+                                href="https://www.spacex.com/">SpaceX</a>, <a href="https://www.space.com/">Space</a>
+                        </p>
+                    </div>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a href="https://www.facebook.com/Draz.Milanista"><i
+                                    class="bi bi-facebook"></i></a></li>
+                        <li class="ms-3"><a href="https://www.instagram.com/draz.principe/"><i
+                                    class="bi bi-instagram"></i></a></li>
+                        <li class="ms-3"><a href="https://discord.gg/nFGY7yVr"><i class="bi bi-discord"></i></a></li>
+                        <li class="ms-3"><a href="https://github.com/DrazPham"><i class="bi bi-github"></i></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
