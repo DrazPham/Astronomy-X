@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="shops.css">
   <link rel="shortcut icon" href="./imgs/Title_icon.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-md sticky-top">
       <div class="container" style="height: var(--top_nav_bar_height);">
         <!-- Smaller Site -->
-        <a class="navbar-brand d-md-none" href="./home.html">
+        <a class="navbar-brand d-md-none" href="./index.html">
           <img src="./imgs/Title_icon.png" alt="icon" style="height:var(--icon_height)">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
@@ -44,7 +44,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center">
               <li class="nav-item">
-                <a class="nav-link" href="./home.html">
+                <a class="nav-link" href="./index.html">
                   <img src="./imgs/Title_icon.png" alt="icon" style="height:var(--icon_height)">
                 </a>
               </li>
@@ -54,17 +54,14 @@
                 </form>
               </li>
               <li class="nav-item"><a class="nav-link" href="./satellites.html">Satellites</a></li>
-              <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#LogIn_form">Log In</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#SignUp_form">Sign Up</a>
-              </li>
-              <!-- <li class="nav-item"><a class="nav-link" href="#">Support</a></li> -->
-              <!-- <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li> -->
+              <li class="nav-item"><a class="nav-link" href="./planets.html">Planets</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="./shop.html">
+                <a class="nav-link" href="#">
                   <i class="bi bi-cart"></i>
                 </a>
               </li>
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#LogIn_form"><i
+                    class="bi bi-person-fill"></i></a></li>
             </ul>
           </div>
         </div>
@@ -95,6 +92,11 @@
             <button type="submit" class="submit">
               <span class="sign-text">Sign in</span>
             </button>
+
+            <p class="signup-link">
+              No account?
+              <a data-bs-toggle="modal" data-bs-target="#SignUp_form">Sign up!</a>
+          </p>
           </form>
         </div>
       </div>
@@ -583,6 +585,66 @@
           </ul>
         </nav>
 
+        <!-- Back to Top -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><strong>^</strong></button>
+        <style>
+          #myBtn {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Fixed/sticky position */
+            bottom: 1rem;
+            /* Place the button at the bottom of the page */
+            left: 1.5rem;
+            /* Place the button 30px from the right */
+            z-index: 99;
+            /* Make sure it does not overlap */
+            border: none;
+            /* Remove borders */
+            outline: none;
+            /* Remove outline */
+            background-color: var(--tside_bgcolor);
+            /* Set a background color */
+            color: var(--main_color);
+            /* Text color */
+            cursor: pointer;
+            /* Add a mouse pointer on hover */
+            padding: .5rem 1rem .5rem 1rem;
+            /* Some padding */
+            border-radius: 10px;
+            /* Rounded corners */
+            font-size: var(--normal_font_size);
+            /* Increase font size */
+          }
+
+          #myBtn:hover {
+            background-color: #555;
+            /* Add a dark-grey background on hover */
+          }
+        </style>
+
+        <script>
+          let mybutton = document.getElementById("myBtn");
+
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function () { scrollFunction() };
+
+          function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+            } else {
+              mybutton.style.display = "none";
+            }
+          }
+
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+          }
+        </script>
+
+
         <!-- Floating Icon -->
         <div class="floating-icon" onclick="toggleMessage()" style="width: 2.5rem; height: 2.5rem">
           <i class="fas fa-info-circle"></i>
@@ -648,13 +710,13 @@
             <div class="col-6 col-md-2 mb-3">
               <h5>Section</h5>
               <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="./home.html" class=" p-0 text-items">Home</a></li>
+                <li class="nav-item mb-2"><a href="./index.html" class=" p-0 text-items">Home</a></li>
                 <li class="nav-item mb-2"><a href="./satellites.html" class=" p-0  text-items">Satellites</a></li>
+                <li class="nav-item mb-2"><a data-bs-toggle="modal" href="./planets.html"
+                    class=" p-0 text-items ">Planets</a></li>
+                <li class="nav-item mb-2"><a href="#" class=" p-0 text-items ">Shop</a></li>
                 <li class="nav-item mb-2"><a data-bs-toggle="modal" data-bs-target="#LogIn_form"
                     class=" p-0 text-items ">Log In</a></li>
-                <li class="nav-item mb-2"><a data-bs-toggle="modal" data-bs-target="#SignUp_form"
-                    class=" p-0 text-items ">Sign Up</a></li>
-                <li class="nav-item mb-2"><a href="#" class=" p-0 text-items ">Shop</a></li>
               </ul>
             </div>
 
