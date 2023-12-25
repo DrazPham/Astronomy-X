@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="planets.css">
+    <link rel="shortcut icon" href="./imgs/Title_icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- Font: Lora -->
+    <title>Astronomy X - Planets</title>
+</head>
+
+<body>
+    <!-- Promotional Messages -->
+    <!-- Top Menu -->
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container" style="height: var(--top_nav_bar_height);">
+            <!-- Smaller Site -->
+            <a class="navbar-brand d-md-none" href="./index.html">
+                <img src="./imgs/Title_icon.png" alt="icon" style="height:var(--icon_height)">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                aria-controls="#offcanvas" aria-label="Toggle navigation" style="border-color: var(--main_color) ;">
+                <span style="color: var(--main_color);">=</span>
+            </button>
+            <!-- Full-Screen Site -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
+                style="background-color: var(--main_bgcolor);">
+                <div class="offcanvas-header">
+                    <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"
+                        style="border: none; background-color: transparent;"><span
+                            style="color: var(--main_color);">X</span></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#List_Info"
+                        aria-controls="offcanvasExample">=
+                    </button>
+                    <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">
+                                <img src="./imgs/Title_icon.png" alt="icon" style="height:var(--icon_height)">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="w-100 me-3 d-flex align-items-center">
+                                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                            </form>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./satellites.html">Satellites</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Planets</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./shop.html">
+                                <i class="bi bi-cart"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#LogIn_form"><i
+                                    class="bi bi-person-fill"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Login Form -->
+    <div class="modal fade" id="LogIn_form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-body p-5 pt-0" style="pointer-events: auto;">
+                <form class="form">
+                    <div class="form-title"><span>JOINING YOUR</span></div>
+                    <div class="title-2"><span>SPACE</span></div>
+                    <div class="input-container">
+                        <input class="input-mail" type="email" placeholder="Enter email" required>
+                        <span> </span>
+                    </div>
+
+                    <section class="bg-stars">
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                    </section>
+
+                    <div class="input-container">
+                        <input class="input-pwd" type="password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="submit">
+                        <span class="sign-text">Sign in</span>
+                    </button>
+
+                    <p class="signup-link">
+                        No account?
+                        <a data-bs-toggle="modal" data-bs-target="#SignUp_form">Sign up!</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sigun Up Form -->
+    <div class="modal fade" id="SignUp_form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-body p-5 pt-0" style="pointer-events: auto;">
+                <form class="form">
+                    <div class="form-title"><span>CREATING YOUR</span></div>
+                    <div class="title-2"><span>SPACE</span></div>
+                    <div class="input-container">
+                        <input class="input-mail" type="email" placeholder="Enter email" required>
+                        <span> </span>
+                    </div>
+
+                    <section class="bg-stars">
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                    </section>
+
+                    <div class="input-container">
+                        <input class="input-pwd" type="password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="submit">
+                        <span class="sign-text">Sign up</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <main>
+        <!-- Caroseul -->
+        <section class="caro_section">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="https://bigthink.com/wp-content/uploads/2023/02/AdobeStock_558949687.jpg"
+                            class="d-block w-100 caro_images" alt="image_1">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="https://www.rheagroup.com/wp-content/uploads/2022/04/international-day-of-human-space-flight.jpg"
+                            class="d-block w-100 caro_images" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="https://assets.iflscience.com/assets/articleNo/59739/aImg/35943/1621265502-astronaut-floating-freely-in-space-fer-gregory-shutterstock-com-o.webp"
+                            class="d-block w-100 caro_images" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+
+        <main class="container">
+            <h1 id="solar_system_title"><strong>Solar System Modal</strong></h1>
+            <div class="sizer">
+                <div class="wrapper">
+                    <div class="solar-system">
+                        <div class="positioner sun"></div>
+                        <div class="orbit positioner mercury">
+                            <div class="planet" type="button" class="btn btn-secondary" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-title="Tooltip on right"></div>
+                        </div>
+                        <div class="orbit positioner venus">
+                            <div class="planet"></div>
+                        </div>
+                        <div class="orbit positioner earth">
+                            <div class="planet"></div>
+                        </div>
+                        <div class="orbit positioner mars">
+                            <div class="planet"></div>
+                        </div>
+                        <div class="orbit positioner jupiter">
+                            <div class="planet"></div>
+                        </div>
+                        <div class="orbit positioner saturn">
+                            <div class="planet"></div>
+                        </div>
+                        <div class="orbit positioner uranus">
+                            <div class="planet"></div>
+                        </div>
+                        <div class="orbit positioner neptune">
+                            <div class="planet"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider -->
+            <div class="slidecontainer">
+                <p>Slower</p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange" style="direction: rtl;">
+                <p>Faster</p>
+            </div>
+            <hr>
+            <script>
+                var slider = document.getElementById("myRange");
+
+                // Update the CSS variable value whenever the slider value changes
+                slider.oninput = function () {
+                    var orbitValue = this.value + 's'; // Assuming the value should be in seconds
+                    document.documentElement.style.setProperty('--earth-orbit', orbitValue);
+                }
+            </script>
+
+            <!-- Off Canvas -->
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="List_Info" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Information List:</h5>
+                    <button type="button" data-bs-dismiss="offcanvas"
+                        style="color: var(--main_color) !important;border: none; background-color: transparent;">x</button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <div id="simple-list-example"
+                                class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
+                                <a class="p-1 rounded" href="#solar_system_title">Modal</a>
+                                <a class="p-1 rounded" href="#Mercury_info">Mercury</a>
+                                <a class="p-1 rounded" href="#Venus_info">Venus</a>
+                                <a class="p-1 rounded" href="#Earth_info">Earth</a>
+                                <a class="p-1 rounded" href="#Mars_info">Mars</a>
+                                <a class="p-1 rounded" href="#Jupiter_info">Jupiter</a>
+                                <a class="p-1 rounded" href="#Saturn_info">Saturn</a>
+                                <a class="p-1 rounded" href="#Uranus_info">Uranus</a>
+                                <a class="p-1 rounded" href="#Neptune_info">Neptune</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Information -->
+            <div class="card mb-3" id="Mercury_info">
+                <img src="https://smd-cms.nasa.gov/wp-content/uploads/2023/11/mercury-messenger-globe-pia15162.jpg"
+                    class="card-img-top" alt="Mercury">
+                <div class="card-body">
+                    <h5 class="card-title">Mercury</h5>
+                    <p class="card-text">Mercury (0.307–0.588 AU (45.9–88.0 million km; 28.5–54.7 million mi) from the
+                        Sun) is the closest planet to the Sun. The smallest planet in the Solar System (0.055
+                        MEarth), Mercury has no natural satellites. The dominant geological features are impact craters
+                        or basins with ejecta blankets, the remains of early volcanic activity including magma flows,
+                        and lobed ridges or rupes that were probably produced by a period of contraction early in the
+                        planet's history. Mercury's very tenuous atmosphere consists of solar-wind particles trapped
+                        by Mercury's magnetic field, as well as atoms blasted off its surface by the solar wind.
+                        Its relatively large iron core and thin mantle have not yet been adequately explained.
+                        Hypotheses include that its outer layers were stripped off by a giant impact, or that it was
+                        prevented from fully accreting by the young Sun's energy.There have been searches for
+                        "Vulcanoids", asteroids in stable orbits between Mercury and the Sun, but none have been
+                        discovered.</p>
+                </div>
+            </div>
+            <div class="card mb-3" id="Venus_info">
+                <img src="https://smd-cms.nasa.gov/wp-content/uploads/2023/09/Venus.jpg?w=4096&format=jpeg"
+                    class="card-img-top" alt="Venus">
+                <div class="card-body">
+                    <h5 class="card-title">Venus</h5>
+                    <p class="card-text">Venus (0.718–0.728 AU (107.4–108.9 million km; 66.7–67.7 million mi) from the
+                        Sun) is close in size to Earth (0.815 MEarth) and, like Earth, has a thick silicate mantle
+                        around an iron core, a substantial atmosphere, and evidence of internal geological activity. It
+                        is much drier than Earth, and its atmosphere is ninety times as dense. Venus has no natural
+                        satellites. It is the hottest planet, with surface temperatures over 400 °C (752 °F), mainly due
+                        to the amount of greenhouse gases in the atmosphere.The planet has no magnetic field that
+                        would prevent the depletion of its substantial atmosphere, which suggests that its atmosphere is
+                        being replenished by volcanic eruptions. A relatively young planetary surface displays
+                        extensive evidence of volcanic activity, but is devoid of plate tectonics. It may undergo
+                        resurfacing episodes on a time scale of 700 million years.</p>
+                </div>
+            </div>
+            <div class="card mb-3" id="Earth_info">
+                <img src="https://science.nasa.gov/_ipx/animated_true&w_4096&f_jpeg/https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002131/GSFC_20171208_Archive_e002131~large.jpg%3Fw=1919%26h=1919%26fit=clip%26crop=faces%252Cfocalpoint"
+                    class="card-img-top" alt="Earth">
+                <div class="card-body">
+                    <h5 class="card-title">Earth</h5>
+                    <p class="card-text">Earth (0.983–1.017 AU (147.1–152.1 million km; 91.4–94.5 million mi) from the
+                        Sun) is the largest and densest of the inner planets, the only one known to have current
+                        geological activity, and the only place in the universe where life is known to exist.Its
+                        liquid hydrosphere is unique among the terrestrial planets, and it is the only planet where
+                        plate tectonics has been observed.Earth's atmosphere is radically different from those of
+                        the other planets, having been altered by the presence of life to contain 21% free
+                        oxygen.The planetary magnetosphere shields the surface from solar and cosmic
+                        radiation, limiting atmospheric stripping and maintaining habitability.It has one natural
+                        satellite, the Moon, the only large satellite of a terrestrial planet in the Solar System.</p>
+                </div>
+            </div>
+            <div class="card mb-3" id="Mars_info">
+                <img src="https://smd-cms.nasa.gov/wp-content/uploads/2016/05/1-mars-nasa-gov-jpg.webp?w=4096&format=png&crop=1"
+                    class="card-img-top" alt="Mars">
+                <div class="card-body">
+                    <h5 class="card-title">Mars</h5>
+                    <p class="card-text">Mars (1.382–1.666 AU (206.7–249.2 million km; 128.5–154.9 million mi) from the
+                        Sun) is smaller than Earth and Venus (0.107 MEarth). It has an atmosphere of mostly carbon
+                        dioxide with a surface pressure of 6.1 millibars (0.088 psi; 0.18 inHg); roughly 0.6% of that of
+                        Earth but sufficient to support weather phenomena.Its surface, peppered with volcanoes,
+                        such as Olympus Mons, and rift valleys, such as Valles Marineris, shows geological activity that
+                        may have persisted until as recently as 2 million years ago.Its red color comes from iron
+                        oxide (rust) in its soil, while the polar regions show white ice caps consisting largely of
+                        water.Mars has two tiny natural satellites (Deimos and Phobos) thought to be either
+                        captured asteroids, or ejected debris from a massive impact early in Mars's history.
+                    </p>
+                </div>
+            </div>
+            <div class="card mb-3" id="Jupiter_info">
+                <img src="https://science.nasa.gov/_ipx/animated_true&w_4096&f_jpeg/https://images-assets.nasa.gov/image/hubble-captures-vivid-auroras-in-jupiters-atmosphere_28000029525_o/hubble-captures-vivid-auroras-in-jupiters-atmosphere_28000029525_o~large.jpg%3Fw=1920%26h=1913%26fit=clip%26crop=faces%252Cfocalpoint"
+                    class="card-img-top" alt="Jupiter">
+                <div class="card-body">
+                    <h5 class="card-title">Jupiter</h5>
+                    <p class="card-text">Jupiter (4.951–5.457 AU (740.7–816.4 million km; 460.2–507.3 million mi) from
+                        the Sun), at 318 MEarth, is 2.5 times the mass of all the other planets put together. It is
+                        composed largely of hydrogen and helium. Jupiter's strong internal heat creates semi-permanent
+                        features in its atmosphere, such as cloud bands and the Great Red Spot. The planet possesses a
+                        4.2–14 Gauss strength magnetosphere that spans 22–29 million km, making it, in certain respects,
+                        the largest object in the Solar System.Jupiter has 95 known satellites. The four largest,
+                        Ganymede, Callisto, Io, and Europa, are called the Galilean moons: they show similarities to the
+                        terrestrial planets, such as volcanism and internal heating.Ganymede, the largest
+                        satellite in the Solar System, is larger than Mercury; Callisto is almost as large.</p>
+                </div>
+            </div>
+            <div class="card mb-3" id="Saturn_info">
+                <img src="https://smd-cms.nasa.gov/wp-content/uploads/2023/06/pia21046-jpg.webp" class="card-img-top"
+                    alt="Saturn">
+                <div class="card-body">
+                    <h5 class="card-title">Saturn</h5>
+                    <p class="card-text">Saturn (9.075–10.07 AU (1.3576–1.5065 billion km; 843.6–936.1 million mi) from
+                        the Sun), distinguished by its extensive ring system, has several similarities to Jupiter,
+                        such as its atmospheric composition and magnetosphere. Although Saturn has 60% of Jupiter's
+                        volume, it is less than a third as massive, at 95 MEarth. Saturn is the only planet of the Solar
+                        System that is less dense than water. The rings of Saturn are made up of small ice and rock
+                        particles.Saturn has 145 confirmed satellites composed largely of ice. Two of these, Titan
+                        and Enceladus, show signs of geological activity;they, as well as five other Saturnian
+                        moons (Iapetus, Rhea, Dione, Tethys, and Mimas), are large enough to be round. Titan, the
+                        second-largest moon in the Solar System, is bigger than Mercury and the only satellite in the
+                        Solar System to have a substantial atmosphere.</p>
+                </div>
+            </div>
+            <div class="card mb-3" id="Uranus_info">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Uranus_as_seen_by_NASA%27s_Voyager_2_%28remastered%29_-_JPEG_converted.jpg"
+                    class="card-img-top" alt="Uranus">
+                <div class="card-body">
+                    <h5 class="card-title">Uranus</h5>
+                    <p class="card-text">Uranus (18.27–20.06 AU (2.733–3.001 billion km; 1.698–1.865 billion mi) from
+                        the Sun), at 14 MEarth, has the lowest mass of the outer planets. Uniquely among the
+                        planets, it orbits the Sun on its side; its axial tilt is over ninety degrees to the ecliptic.
+                        This gives the planet extreme seasonal variation as each pole points toward and then away from
+                        the Sun.It has a much colder core than the other giant planets and radiates very little
+                        heat into space.As a consequence, it has the coldest planetary atmosphere in the Solar
+                        System.Uranus has 27 known satellites, the largest ones being Titania, Oberon, Umbriel,
+                        Ariel, and Miranda.Like the other giant planets, it possesses a ring system and
+                        magnetosphere.</p>
+                </div>
+            </div>
+            <div class="card mb-3" id="Neptune_info">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Neptune_-_Voyager_2_%2829347980845%29_flatten_crop.jpg/800px-Neptune_-_Voyager_2_%2829347980845%29_flatten_crop.jpg"
+                    class="card-img-top" alt="Neptune">
+                <div class="card-body">
+                    <h5 class="card-title">Neptune</h5>
+                    <p class="card-text">Neptune (29.89–30.47 AU (4.471–4.558 billion km; 2.778–2.832 billion mi) from
+                        the Sun), though slightly smaller than Uranus, is more massive (17 MEarth) and hence more
+                        dense. It radiates more internal heat than Uranus, but not as much as Jupiter or Saturn.
+                        Neptune has 14 known satellites. The largest, Triton, is geologically active, with geysers of
+                        liquid nitrogen.Triton is the only large satellite with a retrograde orbit, which
+                        indicates that it did not form with Neptune, but was probably captured from the Kuiper
+                        belt.Neptune is accompanied in its orbit by several minor planets, termed Neptune trojans,
+                        that either lead or trail the planet by about one-sixth of the way around the Sun, positions
+                        known as Lagrange points.</p>
+                </div>
+            </div>
+        </main>
+
+
+        <!-- Back to Top -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><strong>^</strong></button>
+        <style>
+            #myBtn {
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Fixed/sticky position */
+                bottom: 1rem;
+                /* Place the button at the bottom of the page */
+                left: 1.5rem;
+                /* Place the button 30px from the right */
+                z-index: 99;
+                /* Make sure it does not overlap */
+                border: none;
+                /* Remove borders */
+                outline: none;
+                /* Remove outline */
+                background-color: var(--tside_bgcolor);
+                /* Set a background color */
+                color: var(--main_color);
+                /* Text color */
+                cursor: pointer;
+                /* Add a mouse pointer on hover */
+                padding: .5rem 1rem .5rem 1rem;
+                /* Some padding */
+                border-radius: 10px;
+                /* Rounded corners */
+                font-size: var(--normal_font_size);
+                /* Increase font size */
+            }
+
+            #myBtn:hover {
+                background-color: #555;
+                /* Add a dark-grey background on hover */
+            }
+        </style>
+
+        <script>
+            let mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+
+
+        <!-- Floating Icon -->
+        <div class="floating-icon" onclick="toggleMessage()" style="width: 2.5rem; height: 2.5rem;">
+            <i class="fas fa-info-circle"></i>
+        </div>
+
+        <div class="message-box" id="messageBox"
+            style="display: flex; flex-direction: column; border-radius: 5%; margin-bottom: -1.8rem;">
+            <div style=" display:flex; justify-content: space-between;">
+                <img src="./imgs/Title_icon.png" alt="" style="height: 1.5rem;width:1.5rem; border-radius: 50%;">
+                <button type="button" class="btn-close" aria-label="Close" onclick="toggleMessage()"></button>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5rem; width: 12rem;">
+                <div style="display: flex; flex-direction: column;">
+                    <h4 style="color: black;margin-top: 1rem;">Chat with us</h4>
+                    <p style="font-size: 80%; color:black ;margin-top: 0.5rem;">Hi! How can we help you?</p>
+                </div>
+                <button style="border-radius: 10px; background-color: rgb(33,150,243); color: white; border:none">Start
+                    conversation</button>
+            </div>
+        </div>
+
+        <script>
+            function toggleMessage() {
+                var messageBox = document.getElementById('messageBox');
+                messageBox.style.display = (messageBox.style.display === 'block') ? 'none' : 'block';
+            }
+            function hideDot() {
+                var dotIcon = document.getElementById('rounded ');
+                dotIcon.style.display = 'none';
+            }
+        </script>
+    </main>
+
+    <!-- Footer -->
+    <div style="background-color: var(--main_bgcolor);">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col" style=" align-items: center;"><img src="./imgs/Icon.png" alt=""
+                            style="height: 10rem;width: auto;">
+                        <h3 style="margin-top: -2rem; margin-left: 2.2rem;">Astronomy X</h3>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="./index.html" class=" p-0 text-items">Home</a></li>
+                            <li class="nav-item mb-2"><a href="./satellites.html"
+                                    class=" p-0  text-items">Satellites</a></li>
+                            <li class="nav-item mb-2"><a href="#"
+                                    class=" p-0 text-items ">Planets</a></li>
+                            <li class="nav-item mb-2"><a href="./shop.html" class=" p-0 text-items ">Shop</a></li>
+                            <li class="nav-item mb-2"><a data-bs-toggle="modal" data-bs-target="#LogIn_form"
+                                    class=" p-0 text-items ">Log In</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form id="myForm">
+                            <h5>Subscribe to receive the earliest updates</h5>
+                            <p>Stay informed with our latest news, offers, and updates.</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <label for="email" class="visually-hidden">Email address</label>
+                                <input id="email" type="email" name="email" class="form-control"
+                                    placeholder="Email address" required>
+                                <input class="btn btn-primary" type="submit" value="Subscribe">
+                            </div>
+                        </form>
+
+                        <script>
+                            document.getElementById('myForm').addEventListener('submit', function (event) {
+                                event.preventDefault();
+                                document.getElementById('email').value = '';
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <div style="display: flex; flex-direction: column;">
+                        <p>© 2023 Draz, Inc. All rights reserved.</p>
+                        <p>Copyright of <a href="https://getbootstrap.com/">Boostrap</a>, <a
+                                href="https://uiverse.io/">Uiverse.io</a></p>
+                        <p>Supporters: Mr Nguyen Quang Nam, <a href="https://openai.com/">Chat GPT</a>, <a
+                                href="https://stackoverflow.com/">Stack Overflow</a></p>
+                        <p>Influenced by: <a href="https://www.nasa.gov/">NASA</a>, <a
+                                href="https://www.spacex.com/">SpaceX</a>, <a href="https://www.space.com/">Space</a>
+                        </p>
+                    </div>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a href="https://www.facebook.com/Draz.Milanista"><i
+                                    class="bi bi-facebook"></i></a></li>
+                        <li class="ms-3"><a href="https://www.instagram.com/draz.principe/"><i
+                                    class="bi bi-instagram"></i></a></li>
+                        <li class="ms-3"><a href="https://discord.gg/nFGY7yVr"><i class="bi bi-discord"></i></a>
+                        </li>
+                        <li class="ms-3"><a href="https://github.com/DrazPham"><i class="bi bi-github"></i></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
