@@ -727,7 +727,7 @@ h6 {
     color: var(--main_color);
 
 }
-.btn{
+#canvas_btn{
     background-color: var(--tside_bgcolor);
     width: var(--icon_height);
     height: var(--icon_height);
