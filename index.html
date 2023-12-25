@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-md sticky-top">
         <div class="container" style="height: var(--top_nav_bar_height);">
             <!-- Smaller Site -->
-            <a class="navbar-brand d-md-none" href="./home.html">
+            <a class="navbar-brand d-md-none" href="./index.html">
                 <img src="./imgs/Title_icon.png" alt="icon" style="height:var(--icon_height)">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
@@ -43,7 +43,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav flex-grow-1 justify-content-between align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link" href="./home.html">
+                            <a class="nav-link" href="./index.html">
                                 <img src="./imgs/Title_icon.png" alt="icon" style="height:var(--icon_height)">
                             </a>
                         </li>
@@ -53,17 +53,13 @@
                             </form>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="./satellites.html">Satellites</a></li>
-                        <li class="nav-item"><a class="nav-link" data-bs-toggle="modal"
-                                data-bs-target="#LogIn_form">Log In</a></li>
-                        <li class="nav-item"><a class="nav-link" data-bs-toggle="modal"
-                                data-bs-target="#SignUp_form">Sign Up</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link" href="#">Support</a></li> -->
-                        <!-- <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="./planets.html">Planets</a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="./shop.html">
                                 <i class="bi bi-cart"></i>
                             </a>
                         </li>
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#LogIn_form"><i class="bi bi-person-fill"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -72,62 +68,67 @@
     <!-- Login Form -->
     <div class="modal fade" id="LogIn_form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-body p-5 pt-0" style="pointer-events: auto;">
-                    <form class="form">
-                        <div class="form-title"><span>JOINING YOUR</span></div>
-                        <div class="title-2"><span>SPACE</span></div>
-                        <div class="input-container">
-                            <input class="input-mail" type="email" placeholder="Enter email" required>
-                            <span> </span>
-                        </div>
+            <div class="modal-body p-5 pt-0" style="pointer-events: auto;">
+                <form class="form">
+                    <div class="form-title"><span>JOINING YOUR</span></div>
+                    <div class="title-2"><span>SPACE</span></div>
+                    <div class="input-container">
+                        <input class="input-mail" type="email" placeholder="Enter email" required>
+                        <span> </span>
+                    </div>
 
-                        <section class="bg-stars">
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                        </section>
+                    <section class="bg-stars">
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                    </section>
 
-                        <div class="input-container">
-                            <input class="input-pwd" type="password" placeholder="Enter password" required>
-                        </div>
-                        <button type="submit" class="submit">
-                            <span class="sign-text">Sign in</span>
-                        </button>
-                    </form>
-                </div>
+                    <div class="input-container">
+                        <input class="input-pwd" type="password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="submit">
+                        <span class="sign-text">Sign in</span>
+                    </button>
+
+                    <p class="signup-link">
+                        No account?
+                        <a data-bs-toggle="modal" data-bs-target="#SignUp_form">Sign up!</a>
+                    </p>
+                </form>
             </div>
         </div>
+    </div>
 
     <!-- Sigun Up Form -->
     <div class="modal fade" id="SignUp_form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-body p-5 pt-0" style="pointer-events: auto;">
-                    <form class="form">
-                        <div class="form-title"><span>CREATING YOUR</span></div>
-                        <div class="title-2"><span>SPACE</span></div>
-                        <div class="input-container">
-                            <input class="input-mail" type="email" placeholder="Enter email" required>
-                            <span> </span>
-                        </div>
+            <div class="modal-body p-5 pt-0" style="pointer-events: auto;">
+                <form class="form">
+                    <div class="form-title"><span>CREATING YOUR</span></div>
+                    <div class="title-2"><span>SPACE</span></div>
+                    <div class="input-container">
+                        <input class="input-mail" type="email" placeholder="Enter email" required>
+                        <span> </span>
+                    </div>
 
-                        <section class="bg-stars">
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                            <span class="star"></span>
-                        </section>
+                    <section class="bg-stars">
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                    </section>
 
-                        <div class="input-container">
-                            <input class="input-pwd" type="password" placeholder="Enter password" required>
-                        </div>
-                        <button type="submit" class="submit">
-                            <span class="sign-text">Sign up</span>
-                        </button>
-                    </form>
-                </div>
+                    <div class="input-container">
+                        <input class="input-pwd" type="password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="submit">
+                        <span class="sign-text">Sign up</span>
+                    </button>
+                </form>
             </div>
         </div>
+    </div>
     <main>
         <!-- Caroseul -->
         <section class="caro_section">
@@ -227,95 +228,98 @@
 
                         <p>The vacuum of space is unforgiving, and time is not on your side.</p>
                         <hr>
-                        <img src="https://cdn.mos.cms.futurecdn.net/De8fcLpzvwfBGfqzabqGZ3-650-80.jpg.webp" alt=""  class="content_images">
+                        <img src="https://cdn.mos.cms.futurecdn.net/De8fcLpzvwfBGfqzabqGZ3-650-80.jpg.webp" alt=""
+                            class="content_images">
                         <figcaption>Astronaut Robert Stewart during Manned Maneuvering Unit (MMU) Exercise untethered
                             above the
                             Earth.February 11, 1984. (Image credit: HUM Images/Universal Images Group via Getty Images)
                         </figcaption> <br>
-                            <p>Many of us have dreamed of going into space. Perhaps you've imagined what it would be
-                                like to
-                                visit the International Space Station or even explore new worlds. But traveling in space
-                                brings a whole set of challenges and hostile environments, so it's vital to recreate the
-                                conditions on Earth that have allowed life to evolve and flourish. <br> <br>
+                        <p>Many of us have dreamed of going into space. Perhaps you've imagined what it would be
+                            like to
+                            visit the International Space Station or even explore new worlds. But traveling in space
+                            brings a whole set of challenges and hostile environments, so it's vital to recreate the
+                            conditions on Earth that have allowed life to evolve and flourish. <br> <br>
 
-                                Spacesuits allow astronauts to venture outside their spacecraft for short periods, by
-                                providing the air, water, pressure and physical protection needed for a human to
-                                survive. <br> <br>
-                                But what would happen without one of these advanced suits? <br> <br>
+                            Spacesuits allow astronauts to venture outside their spacecraft for short periods, by
+                            providing the air, water, pressure and physical protection needed for a human to
+                            survive. <br> <br>
+                            But what would happen without one of these advanced suits? <br> <br>
 
-                                Sci-fi movies and shows, including "2001: A Space Odyssey" and "The Expanse," have
-                                portrayed 
-                                astronauts suffering — and surviving — short exposures to outer space without a
-                                spacesuit,
-                                while others have depicted a range of grisly deaths. </p> 
-                            <p>But here in the real world, how long could a person survive if thrust into the harsh
-                                vacuum
-                                of outer space? The short answer is, not very long. </p> 
-                            <p>"Within a very short time, a matter of 10 to 15 seconds, you will become unconscious
-                                because of a lack of oxygen," according to Stefaan de Mey, a senior strategy officer at
-                                the European Space Agency (ESA) charged with coordinating the strategy area for human
-                                and robotic exploration. <br> <br>
+                            Sci-fi movies and shows, including "2001: A Space Odyssey" and "The Expanse," have
+                            portrayed
+                            astronauts suffering — and surviving — short exposures to outer space without a
+                            spacesuit,
+                            while others have depicted a range of grisly deaths. </p>
+                        <p>But here in the real world, how long could a person survive if thrust into the harsh
+                            vacuum
+                            of outer space? The short answer is, not very long. </p>
+                        <p>"Within a very short time, a matter of 10 to 15 seconds, you will become unconscious
+                            because of a lack of oxygen," according to Stefaan de Mey, a senior strategy officer at
+                            the European Space Agency (ESA) charged with coordinating the strategy area for human
+                            and robotic exploration. <br> <br>
 
-                                That may seem like a very short time, but it's because you would not want to hold your
-                                breath before being thrust into outer space. In the dark void of space, the oxygen that
-                                sustains us would become a serious problem. <br> <br>
+                            That may seem like a very short time, but it's because you would not want to hold your
+                            breath before being thrust into outer space. In the dark void of space, the oxygen that
+                            sustains us would become a serious problem. <br> <br>
 
-                                "The oxygen starts expanding and rupturing your lungs, tearing them apart — and that
-                                would cause boiling and bubbling of your blood, which immediately will cause embolism
-                                and have a fatal impact on your body," de Mey said. <br> <br>
+                            "The oxygen starts expanding and rupturing your lungs, tearing them apart — and that
+                            would cause boiling and bubbling of your blood, which immediately will cause embolism
+                            and have a fatal impact on your body," de Mey said. <br> <br>
 
-                                Divers face a similar danger when the water pressure decreases as they ascend from the
-                                depths. Before entering space unprotected, you'd need to empty your lungs as much as
-                                possible. The complete lack of pressure also causes other, though less immediately,
-                                deadly issues. </p> <br>
-                            <img src="https://cdn.mos.cms.futurecdn.net/KNEH3cnsKAT6FkKt6ABjyK-1024-80.jpg" alt="" class="content_images">
-                            <figcaption>Astronaut Ed White floats in the microgravity of space outside the Gemini IV
-                                spacecraft. (Image credit: NASA/Jim McDivitt)</figcaption> <br> 
-                            <p>Bodily fluids, such as saliva and tears, would begin to boil. A human body would also
-                                expand, but the skin would be elastic enough to cope with the pressure change, de Mey
-                                said, adding that horrific movie portrayals of exploding humans are not accurate. <br> <br>
+                            Divers face a similar danger when the water pressure decreases as they ascend from the
+                            depths. Before entering space unprotected, you'd need to empty your lungs as much as
+                            possible. The complete lack of pressure also causes other, though less immediately,
+                            deadly issues. </p> <br>
+                        <img src="https://cdn.mos.cms.futurecdn.net/KNEH3cnsKAT6FkKt6ABjyK-1024-80.jpg" alt=""
+                            class="content_images">
+                        <figcaption>Astronaut Ed White floats in the microgravity of space outside the Gemini IV
+                            spacecraft. (Image credit: NASA/Jim McDivitt)</figcaption> <br>
+                        <p>Bodily fluids, such as saliva and tears, would begin to boil. A human body would also
+                            expand, but the skin would be elastic enough to cope with the pressure change, de Mey
+                            said, adding that horrific movie portrayals of exploding humans are not accurate. <br> <br>
 
-                                In the best-case scenario, you'd have a few seconds before the oxygen in your
-                                bloodstream would be used up, causing you to pass out. Because you'd be unable to alter
-                                your dire situation, brain death would follow within minutes, unless you were rescued
-                                and brought back to the safety of the pressurized, oxygen-rich environment of a
-                                spacecraft and resuscitated. <br> <br>
+                            In the best-case scenario, you'd have a few seconds before the oxygen in your
+                            bloodstream would be used up, causing you to pass out. Because you'd be unable to alter
+                            your dire situation, brain death would follow within minutes, unless you were rescued
+                            and brought back to the safety of the pressurized, oxygen-rich environment of a
+                            spacecraft and resuscitated. <br> <br>
 
-                                In addition to providing vital oxygen and pressurization, spacesuits also shield
-                                astronauts from other dangers and harm. </p> 
-                            <img src="https://cdn.mos.cms.futurecdn.net/WNxsUHAAhejaMyMs8J8K3-1024-80.jpg.webp" alt="" class="content_images">
-                            <figcaption>NASA astronaut Stephen Bowen (right) and UAE astronaut Sultan AlNeyadi work on
-                                an antenna assembly as the Earth and moon hang overhead outside the International Space
-                                Station. (Image credit: NASA TV)</figcaption> <br>
-                            <p>"There is a temperature problem and radiation and micrometeoroid threats," de Mey said.
-                                "So spacesuits are designed to provide physical protection of the astronauts in outer
-                                space." <br><br>
+                            In addition to providing vital oxygen and pressurization, spacesuits also shield
+                            astronauts from other dangers and harm. </p>
+                        <img src="https://cdn.mos.cms.futurecdn.net/WNxsUHAAhejaMyMs8J8K3-1024-80.jpg.webp" alt=""
+                            class="content_images">
+                        <figcaption>NASA astronaut Stephen Bowen (right) and UAE astronaut Sultan AlNeyadi work on
+                            an antenna assembly as the Earth and moon hang overhead outside the International Space
+                            Station. (Image credit: NASA TV)</figcaption> <br>
+                        <p>"There is a temperature problem and radiation and micrometeoroid threats," de Mey said.
+                            "So spacesuits are designed to provide physical protection of the astronauts in outer
+                            space." <br><br>
 
-                                Whether an astronaut is in sunlight or shaded from the sun, they would experience
-                                extreme temperatures, ranging from minus 240 to 250 degrees Fahrenheit (minus 150 to 120
-                                degrees Celsius) in low Earth orbit (LEO). These conditions would cause burns or
-                                freezing, though not immediately in the latter case, as body heat is not easily
-                                conducted away in a vacuum. <br><br>
+                            Whether an astronaut is in sunlight or shaded from the sun, they would experience
+                            extreme temperatures, ranging from minus 240 to 250 degrees Fahrenheit (minus 150 to 120
+                            degrees Celsius) in low Earth orbit (LEO). These conditions would cause burns or
+                            freezing, though not immediately in the latter case, as body heat is not easily
+                            conducted away in a vacuum. <br><br>
 
-                                Spacesuits also protect from various types of radiation. In LEO, there is protection
-                                from some forms of radiation. Prolonged or long-term exposure to electromagnetic
-                                radiation from the sun would cause health issues, including radiation sickness and an
-                                increased risk of cancer. UV light would also burn the skin. The added misfortune of
-                                particles from a solar flare reaching the astronaut at the time they were exposed in
-                                space would exacerbate many of these issues.</p>
-                            <p>Most of these elements are styled by browsers with few modifications on our part.</p>
-                            <p>Micrometeoroids and space debris pose another danger. These travel at a rate of a few or
-                                tens of kilometers per second and are a threat to satellites, spacecraft and astronauts
-                                conducting extravehicular activities (EVAs), or spacewalks. Though extremely unlikely to
-                                affect an unprotected astronaut's chances of survival given the astronomically tiny
-                                chances of being hit during a short time in space, spacesuits are designed with multiple
-                                layers to help protect astronauts from any possible micrometeoroids or space debris
-                                whizzing around in orbit. <br><br>
+                            Spacesuits also protect from various types of radiation. In LEO, there is protection
+                            from some forms of radiation. Prolonged or long-term exposure to electromagnetic
+                            radiation from the sun would cause health issues, including radiation sickness and an
+                            increased risk of cancer. UV light would also burn the skin. The added misfortune of
+                            particles from a solar flare reaching the astronaut at the time they were exposed in
+                            space would exacerbate many of these issues.</p>
+                        <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+                        <p>Micrometeoroids and space debris pose another danger. These travel at a rate of a few or
+                            tens of kilometers per second and are a threat to satellites, spacecraft and astronauts
+                            conducting extravehicular activities (EVAs), or spacewalks. Though extremely unlikely to
+                            affect an unprotected astronaut's chances of survival given the astronomically tiny
+                            chances of being hit during a short time in space, spacesuits are designed with multiple
+                            layers to help protect astronauts from any possible micrometeoroids or space debris
+                            whizzing around in orbit. <br><br>
 
-                                Being in space without an EVA suit becomes very deadly — very, very quickly. While
-                                someone could survive this grim scenario, they would want to have very little air in
-                                their lungs and get back to the safety of a pressurized spacecraft within seconds — or
-                                hope to be rescued and resuscitated within minutes. </p> <br>
+                            Being in space without an EVA suit becomes very deadly — very, very quickly. While
+                            someone could survive this grim scenario, they would want to have very little air in
+                            their lungs and get back to the safety of a pressurized spacecraft within seconds — or
+                            hope to be rescued and resuscitated within minutes. </p> <br>
                     </article>
 
                 </div>
@@ -323,7 +327,8 @@
                 <div class="col-md-4">
                     <div class="position-sticky" style="top: 2rem;">
                         <div class="mb-3 bg-body-tertiary rounded">
-                            <img src="https://www.cnet.com/a/img/resize/1a01b6b074937ad937e9eb4430bd21fa5bf31957/hub/2019/01/11/21c3dece-7bbb-4fba-8fca-10c894b8b39a/starship.jpg?auto=webp&width=1200" alt="">
+                            <img src="https://www.cnet.com/a/img/resize/1a01b6b074937ad937e9eb4430bd21fa5bf31957/hub/2019/01/11/21c3dece-7bbb-4fba-8fca-10c894b8b39a/starship.jpg?auto=webp&width=1200"
+                                alt="">
                         </div>
 
                         <div>
@@ -358,7 +363,7 @@
                                 <li>
                                     <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
                                         href="https://www.space.com/running-chicken-nebula-vlt-photo">
-                                        <img src="https://cdn.mos.cms.futurecdn.net/M8SHXsWYcykbq5TzGcP72h-650-80.jpg.webp" 
+                                        <img src="https://cdn.mos.cms.futurecdn.net/M8SHXsWYcykbq5TzGcP72h-650-80.jpg.webp"
                                             alt="">
                                         <div class="col-lg-8">
                                             <h6 class="mb-0">Distant nebula looks like fleeing turkey in festive new
@@ -382,6 +387,68 @@
                     </div>
                 </div>
             </div>
+
+
+            <!-- Back to Top -->
+            <button onclick="topFunction()" id="myBtn" title="Go to top"><strong>^</strong></button>
+            <style>
+                #myBtn {
+                    display: none;
+                    /* Hidden by default */
+                    position: fixed;
+                    /* Fixed/sticky position */
+                    bottom: 1rem;
+                    /* Place the button at the bottom of the page */
+                    left: 1.5rem;
+                    /* Place the button 30px from the right */
+                    z-index: 99;
+                    /* Make sure it does not overlap */
+                    border: none;
+                    /* Remove borders */
+                    outline: none;
+                    /* Remove outline */
+                    background-color: var(--tside_bgcolor);
+                    /* Set a background color */
+                    color: var(--main_color);
+                    /* Text color */
+                    cursor: pointer;
+                    /* Add a mouse pointer on hover */
+                    padding: .5rem 1rem .5rem 1rem;
+                    /* Some padding */
+                    border-radius: 10px;
+                    /* Rounded corners */
+                    font-size: var(--normal_font_size);
+                    /* Increase font size */
+                }
+
+                #myBtn:hover {
+                    background-color: #555;
+                    /* Add a dark-grey background on hover */
+                }
+            </style>
+
+            <script>
+                let mybutton = document.getElementById("myBtn");
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function () { scrollFunction() };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0; // For Safari
+                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                }
+            </script>
+
+            
             <!-- Floating Icon -->
             <div class="floating-icon" onclick="toggleMessage()" style="width: 2.5rem; height: 2.5rem;">
                 <i class="fas fa-info-circle"></i>
@@ -414,73 +481,78 @@
                     dotIcon.style.display = 'none';
                 }
             </script>
-    </main>
+        </main>
 
-    <!-- Footer -->
-    <div style="background-color: var(--main_bgcolor);">
-        <div class="container">
-            <footer class="py-5">
-                <div class="row">
-                    <div class="col" style=" align-items: center;"><img src="./imgs/Icon.png" alt=""
-                            style="height: 10rem;width: auto;">
-                        <h3 style="margin-top: -2rem; margin-left: 2.2rem;">Astronomy X</h3>
+        <!-- Footer -->
+        <div style="background-color: var(--main_bgcolor);">
+            <div class="container">
+                <footer class="py-5">
+                    <div class="row">
+                        <div class="col" style=" align-items: center;"><img src="./imgs/Icon.png" alt=""
+                                style="height: 10rem;width: auto;">
+                            <h3 style="margin-top: -2rem; margin-left: 2.2rem;">Astronomy X</h3>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Section</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class=" p-0 text-items">Home</a></li>
+                                <li class="nav-item mb-2"><a href="./satellites.html"
+                                    class=" p-0  text-items">Satellites</a></li>
+                                <li class="nav-item mb-2"><a href="./planets.html"
+                                    class=" p-0 text-items ">Planets</a></li>
+                                <li class="nav-item mb-2"><a href="./shop.html" class=" p-0 text-items ">Shop</a></li>
+                                <li class="nav-item mb-2"><a data-bs-toggle="modal" data-bs-target="#LogIn_form"
+                                        class=" p-0 text-items ">Log In</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-5 offset-md-1 mb-3">
+                            <form id="myForm">
+                                <h5>Subscribe to receive the earliest updates</h5>
+                                <p>Stay informed with our latest news, offers, and updates.</p>
+                                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                    <label for="email" class="visually-hidden">Email address</label>
+                                    <input id="email" type="email" name="email" class="form-control"
+                                        placeholder="Email address" required>
+                                    <input class="btn btn-primary" type="submit" value="Subscribe">
+                                </div>
+                            </form>
+
+                            <script>
+                                document.getElementById('myForm').addEventListener('submit', function (event) {
+                                    event.preventDefault();
+                                    document.getElementById('email').value = '';
+                                });
+                            </script>
+                        </div>
                     </div>
 
-                    <div class="col-6 col-md-2 mb-3">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class=" p-0 text-items">Home</a></li>
-                            <li class="nav-item mb-2"><a href="./satellites.html" class=" p-0  text-items">Satellites</a></li>
-                            <li class="nav-item mb-2"><a data-bs-toggle="modal" data-bs-target="#LogIn_form" class=" p-0 text-items ">Log In</a></li>
-                            <li class="nav-item mb-2"><a data-bs-toggle="modal" data-bs-target="#SignUp_form"class=" p-0 text-items ">Sign Up</a></li>
-                            <li class="nav-item mb-2"><a href="./shop.html" class=" p-0 text-items ">Shop</a></li>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                        <div style="display: flex; flex-direction: column;">
+                            <p>© 2023 Draz, Inc. All rights reserved.</p>
+                            <p>Copyright of <a href="https://getbootstrap.com/">Boostrap</a>, <a
+                                    href="https://uiverse.io/">Uiverse.io</a></p>
+                            <p>Supporters: Mr Nguyen Quang Nam, <a href="https://openai.com/">Chat GPT</a>, <a
+                                    href="https://stackoverflow.com/">Stack Overflow</a></p>
+                            <p>Influenced by: <a href="https://www.nasa.gov/">NASA</a>, <a
+                                    href="https://www.spacex.com/">SpaceX</a>, <a
+                                    href="https://www.space.com/">Space</a>
+                            </p>
+                        </div>
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3"><a href="https://www.facebook.com/Draz.Milanista"><i
+                                        class="bi bi-facebook"></i></a></li>
+                            <li class="ms-3"><a href="https://www.instagram.com/draz.principe/"><i
+                                        class="bi bi-instagram"></i></a></li>
+                            <li class="ms-3"><a href="https://discord.gg/nFGY7yVr"><i class="bi bi-discord"></i></a>
+                            </li>
+                            <li class="ms-3"><a href="https://github.com/DrazPham"><i class="bi bi-github"></i></a></li>
                         </ul>
                     </div>
-
-                    <div class="col-md-5 offset-md-1 mb-3">
-                        <form id="myForm">
-                            <h5>Subscribe to receive the earliest updates</h5>
-                            <p>Stay informed with our latest news, offers, and updates.</p>
-                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                                <label for="email" class="visually-hidden">Email address</label>
-                                <input id="email" type="email" name="email" class="form-control"
-                                    placeholder="Email address" required>
-                                <input class="btn btn-primary" type="submit" value="Subscribe">
-                            </div>
-                        </form>
-
-                        <script>
-                            document.getElementById('myForm').addEventListener('submit', function (event) {
-                                event.preventDefault();
-                                document.getElementById('email').value = '';
-                            });
-                        </script>
-                    </div>
-                </div>
-
-                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                    <div style="display: flex; flex-direction: column;">
-                        <p>© 2023 Draz, Inc. All rights reserved.</p>
-                        <p>Copyright of <a href="https://getbootstrap.com/">Boostrap</a>, <a
-                                href="https://uiverse.io/">Uiverse.io</a></p>
-                        <p>Supporters: Mr Nguyen Quang Nam, <a href="https://openai.com/">Chat GPT</a>, <a
-                                href="https://stackoverflow.com/">Stack Overflow</a></p>
-                        <p>Influenced by: <a href="https://www.nasa.gov/">NASA</a>, <a
-                                href="https://www.spacex.com/">SpaceX</a>, <a href="https://www.space.com/">Space</a>
-                        </p>
-                    </div>
-                    <ul class="list-unstyled d-flex">
-                        <li class="ms-3"><a href="https://www.facebook.com/Draz.Milanista"><i
-                                    class="bi bi-facebook"></i></a></li>
-                        <li class="ms-3"><a href="https://www.instagram.com/draz.principe/"><i
-                                    class="bi bi-instagram"></i></a></li>
-                        <li class="ms-3"><a href="https://discord.gg/nFGY7yVr"><i class="bi bi-discord"></i></a></li>
-                        <li class="ms-3"><a href="https://github.com/DrazPham"><i class="bi bi-github"></i></a></li>
-                    </ul>
-                </div>
-            </footer>
+                </footer>
+            </div>
         </div>
-    </div>
 </body>
 
 </html>
