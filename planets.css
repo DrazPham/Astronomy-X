@@ -34,6 +34,15 @@
     --clr-uranus: #d6fcfd;
     --clr-neptune: #00749a;
     --offcanvas_width:15rem;
+    --earth-tilt: rotate(23.26deg);
+    --earth-day: 23.9;
+    --earth-color:#b3caff;
+    --mars-tilt: rotate(25.26deg);
+    --mars-day:24.6;
+    --mars-color:#c07158;
+    --jupiter-tilt: rotate(3.1deg);
+    --jupiter-day:9.9;
+    --jupiter-color:#c9b5a4;
 }
 
 body {
@@ -685,7 +694,7 @@ h6 {
     display: flex;
     justify-content: center;
     flex-direction: row ;
-    gap: 1rem;
+    gap: 3rem;
 }
 #myRange{
     width: 20rem;
@@ -732,4 +741,98 @@ h6 {
     width: var(--icon_height);
     height: var(--icon_height);
     margin-top: 0.5rem;
+}
+
+
+
+@keyframes planetRotate {
+    0%{
+        background-position: 0% center;
+    }
+
+    100%{
+        background-position: -200% center;
+    }
+}
+
+
+.planet_2_div{
+    height: 100vh ;
+    background: var(--fs_bgcolor);
+    color: var(--main_color);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.card_2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    --color: var(--earth-color);
+    --tilt: var(--earth-tilt);
+    --day: var(--earth-day);
+}
+
+.earth_2 .surface{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-image: url(https://codetheworld.io/wp-content/uploads/2023/12/earth.jpg);
+    background-size: cover;
+    transform: var(--tilt) scale(1.2);
+    animation: planetRotate calc(var(--day)* .1s) linear infinite;
+}
+
+.mars_2 .surface{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-image: url(https://codetheworld.io/wp-content/uploads/2023/12/mars.jpg);
+    background-size: cover;
+    transform: var(--tilt) scale(1.2);
+    animation: planetRotate calc(var(--day)* .1s) linear infinite;
+}
+
+.jupiter_2 .surface{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-image: url(https://codetheworld.io/wp-content/uploads/2023/12/jupiter.jpg);
+    background-size: cover;
+    transform: var(--tilt) scale(1.2);
+    animation: planetRotate calc(var(--day)* .1s) linear infinite;
+}
+.atmosphere{
+    height: 190px;
+    width: 190px;
+    position: relative;
+    background: radial-gradient(circle at 30% 50%, #ffffff4d 0%, #ffffff00 65%);
+    border-radius: 100px;
+    overflow: hidden;
+    box-shadow:
+    inset 10px 0px 12px -2px #ffffff33,
+    inset -70px 0px 50px 0px black,
+    -5px 0px 10px -4px var(--color);
+}
+.planet_2::before{
+    content: "";
+    position: absolute;
+    height: 190px;
+    z-index: -2;
+    left: 50%;
+    top: 0%;
+    border-left: 1px dashed var(--color);
+    transform: var(--tilt) scale(1.2);
+}
+.title{
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: var(--xxlarge_font_size);
 }
